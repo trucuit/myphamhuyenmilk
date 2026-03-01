@@ -18,10 +18,11 @@ define('DEFAULT_CONTROLLER', 'index');
 define('DEFAULT_ACTION', 'index');
 
 // ====================== DATABASE ===========================
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'huyenmilk');
+// IMPORTANT: Set these values via environment variables or a local config file
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') ?: '');
+define('DB_NAME', getenv('DB_NAME') ?: 'huyenmilk');
 define('DB_TABLE', 'sanpham');
 
 // ====================== DATABASE TABLE===========================
